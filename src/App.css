@@ -1,0 +1,165 @@
+.App {
+  text-align: center;
+}
+
+.logo {
+  height: 40px;
+  padding: 10px;
+  margin-left:97px;
+  cursor: pointer;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.somebutton {
+  display: none;
+}
+
+/* table tbody tr:first-child {
+  font-weight: bold;
+  color: greenyellow;
+  background-color: rgb(0, 0, 0) !important;
+} */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+td {
+  background-color: transparent !important;
+}
+
+.ht_master tr td {
+  margin-top: 15px;
+}
+
+.handsontable table {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.handsontable table thead th {
+  background-color: #e8af35;
+  color: #01383a;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+  height: 20px;
+}
+
+.styles {
+  margin-top: 15em;
+  color: rgb(12, 2, 2);
+  background-color: #f7f7f7 !important;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.table {
+  /* margin-top: 15em; */
+  color: rgb(12, 2, 2);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.dataCard {
+  margin-top: 10em; 
+  color: rgb(12, 2, 2);
+  background-color: #f7f7f7 !important;
+  display: flex; 
+  flex-direction: column; 
+  padding-bottom: 30px; 
+  width: 40%; 
+  text-align: center; 
+  margin-left: auto; 
+  margin-right: auto; 
+  justify-content: center; 
+
+}
+
+.dataList {
+  margin-top: 50px;
+}
+
+.reportsCard {
+  margin-top: 30px;
+  color: rgb(12, 2, 2);
+  background-color: #f7f7f7 !important;
+  display: flex; 
+  flex-direction: column; 
+  padding-bottom: 30px; 
+  width: 40%; 
+  text-align: center; 
+  margin-left: auto; 
+  margin-right: auto; 
+  justify-content: center; 
+
+}
+
+.dataCardButton { 
+  margin-bottom: 10px !important; 
+  margin-top: 20px !important;
+  margin-left:45% !important;
+}
+
+.AppBar {
+  background-color: #f7f7f7 !important;
+}
+
+.loginButton {
+  margin-bottom: 10px !important;
+  margin-top: 20px !important;
+}
+
+#example-component {
+  z-index: 1;
+  /* margin-top: 20px; */
+}
+
+.topHeaderFte {
+  text-align: right !important;
+  font-size: 150% !important;
+}
+
+.topHeaderCompany {
+  font-size: 150% !important;
+}
+
+.topContent {
+  font-size: 100% !important;
+}
+
+.topTitle {
+  font-size: 230% !important;
+  margin-bottom: 30px !important;
+}
