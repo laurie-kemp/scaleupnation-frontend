@@ -18,7 +18,8 @@ export const logout = () => ({
   type: USER_LOGOUT
 });
 
-const baseUrl = "http://localhost:4000";
+// const baseUrl = "http://localhost:4000";
+const baseUrl = "https://scaleupnation.herokuapp.com";
 
 export const login = (email, password) => dispatch =>
   request
