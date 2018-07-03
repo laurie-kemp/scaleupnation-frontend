@@ -23,12 +23,12 @@ export class List extends React.Component {
 
   render() {
     const { listRed, databases, csv, changes } = this.props;
-    let ChangesfromCSV = []
-    if(changes) {
-      console.log(changes, "CHANGES")
+    let ChangesfromCSV = [];
+    if (changes) {
+      // console.log(changes, "CHANGES");
       ChangesfromCSV = Object.keys(changes).map(i => changes[i]);
       ChangesfromCSV.map(change => {
-        console.log(change[0])
+        console.log(change[0]);
         // const update = {
         //   company: change[0].venture,
         //   columnName: "HQ_source",
@@ -36,12 +36,10 @@ export class List extends React.Component {
         // };
         const dbupdate = {
           HQ_source: change[0].csv_location
-        }
-        
-        this.props.changeCell(change[0].id, dbupdate)
-       
-      })
+        };
 
+        this.props.changeCell(change[0].id, dbupdate);
+      });
     }
     let dbArray = [];
     if (databases) dbArray = Object.keys(databases).map(i => databases[i]);
@@ -111,9 +109,7 @@ export class List extends React.Component {
               "Added on"
             ],
             stretchH: "all",
-            width: 1500,
             autoWrapRow: true,
-            height: 1000,
             rowHeaders: true,
             filters: true,
             columnSorting: true,

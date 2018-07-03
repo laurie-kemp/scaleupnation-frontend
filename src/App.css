@@ -5,7 +5,7 @@
 .logo {
   height: 40px;
   padding: 10px;
-  margin-left:97px;
+  margin-left: 97px;
   cursor: pointer;
 }
 
@@ -52,6 +52,7 @@ td {
 }
 
 .handsontable table {
+  width: 100%;
   margin-top: 20px;
   overflow: hidden;
 }
@@ -93,18 +94,17 @@ td {
 }
 
 .dataCard {
-  margin-top: 10em; 
+  margin-top: 10em;
   color: rgb(12, 2, 2);
   background-color: #f7f7f7 !important;
-  display: flex; 
-  flex-direction: column; 
-  padding-bottom: 30px; 
-  width: 40%; 
-  text-align: center; 
-  margin-left: auto; 
-  margin-right: auto; 
-  justify-content: center; 
-
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  width: 40%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .dataList {
@@ -115,21 +115,20 @@ td {
   margin-top: 30px;
   color: rgb(12, 2, 2);
   background-color: #f7f7f7 !important;
-  display: flex; 
-  flex-direction: column; 
-  padding-bottom: 30px; 
-  width: 40%; 
-  text-align: center; 
-  margin-left: auto; 
-  margin-right: auto; 
-  justify-content: center; 
-
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  width: 40%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
-.dataCardButton { 
-  margin-bottom: 10px !important; 
+.dataCardButton {
+  margin-bottom: 10px !important;
   margin-top: 20px !important;
-  margin-left:45% !important;
+  margin-left: 45% !important;
 }
 
 .AppBar {
@@ -142,6 +141,8 @@ td {
 }
 
 #example-component {
+  width: 100vw;
+  height: 100vh;
   z-index: 1;
   /* margin-top: 20px; */
 }
