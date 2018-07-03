@@ -25,15 +25,8 @@ export class List extends React.Component {
     const { listRed, databases, csv, changes } = this.props;
     let ChangesfromCSV = [];
     if (changes) {
-      // console.log(changes, "CHANGES");
       ChangesfromCSV = Object.keys(changes).map(i => changes[i]);
       ChangesfromCSV.map(change => {
-        console.log(change[0]);
-        // const update = {
-        //   company: change[0].venture,
-        //   columnName: "HQ_source",
-        //   change: change[0].csv_location
-        // };
         const dbupdate = {
           HQ_source: change[0].csv_location
         };
@@ -43,11 +36,8 @@ export class List extends React.Component {
     }
     let dbArray = [];
     if (databases) dbArray = Object.keys(databases).map(i => databases[i]);
-
-    // console.log(dbArray, "DATABASE ARRAY");
     let columnNames = [];
     if (dbArray[0]) columnNames = Object.keys(dbArray[0]).map(i => i);
-    // console.log(columnNames, "COLUMNS");
     let data = [];
     let values = [];
     if (dbArray) {
@@ -56,14 +46,11 @@ export class List extends React.Component {
       });
       const newNames = columnNames.map(name => {
         const ArrayOfStrings = name.split("_");
-        // console.log(ArrayOfStrings, "ARRAY OF STRINGS")
         return ArrayOfStrings.join(" ");
       });
-      // console.log(newNames, "NEW NAMES")
       data.push(newNames);
       values.map(entry => data.push(entry));
     }
-    // console.log(data, "DATA");
 
     return (
       <div id="example-component">
@@ -131,7 +118,6 @@ export class List extends React.Component {
                 const newPayload = { [name]: value };
                 this.props.changeCell(payload.row + 1, newPayload);
                 const companyName = databases[payload.row + 1].venture;
-                // console.log(companyName, "COMPANY NAME");
                 const date = Date.now();
                 const update = {
                   company: companyName,
@@ -139,10 +125,6 @@ export class List extends React.Component {
                   change: value
                 };
                 this.props.addUpdate(update);
-                // console.log(databases[payload.id].venture, "COMPANY");
-                console.log(update, "UPDATE GOING TO DB");
-                // console.log(payload.row + 1, "ID");
-                // console.log(newPayload, "Payload");
               }
             }
           }}

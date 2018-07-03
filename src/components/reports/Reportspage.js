@@ -6,8 +6,8 @@ import "react-select/dist/react-select.css";
 import Button from "@material-ui/core/Button";
 import Graph from "./Graph";
 import { Checkbox } from "@material-ui/core";
-import Card from '@material-ui/core/Card';
-import './Reports.css'
+import Card from "@material-ui/core/Card";
+import "./Reports.css";
 
 class Reports extends Component {
   state = {
@@ -131,8 +131,6 @@ class Reports extends Component {
   };
 
   render() {
-    console.log(this.state, "This state");
-    console.log(this.props, "This props");
     return (
       <div>
         <Button onClick={() => this.setRenderAll()}>Fetch all updates</Button>
@@ -171,22 +169,30 @@ class Reports extends Component {
                 value="Plot graph"
                 onChange={this.handlePlotGraph}
                 checked={this.state.plotGraph}
-              /> Plot Graph
-              <Button type="submit" value="Submit">Submit</Button>
+              />{" "}
+              Plot Graph
+              <Button type="submit" value="Submit">
+                Submit
+              </Button>
             </form>
             <div>
               {this.state.renderSpecific && (
                 <div>
-                  {this.state.column && this.state.company && this.state.filtered.length > 0 && this.state.plotGraph &&
-                    <Graph data={this.state.filtered} />
-                  }
+                  {this.state.column &&
+                    this.state.company &&
+                    this.state.filtered.length > 0 &&
+                    this.state.plotGraph && (
+                      <Graph data={this.state.filtered} />
+                    )}
                   {this.state.filtered &&
                     this.state.filtered.map((update, i) => {
-                      console.log(update.timestamp.slice(0, 10))
                       return (
-                        <Card key={`${i} ${update.company}`} className='dataCard dataList' >
+                        <Card
+                          key={`${i} ${update.company}`}
+                          className="dataCard dataList"
+                        >
                           <h1>{update.company}</h1>
-                          <div className='update-card'>
+                          <div className="update-card">
                             <span>{update.timestamp.slice(0, 10)}</span>
                             <span>{update.columnName}</span>
                             <span>{update.change}</span>
